@@ -10,6 +10,14 @@ void LevelScheme::addTransition(double from, double to, const std::string& type,
 	transitions.push_back({from,to,type,intensity});
 }
 
+void LevelScheme::addThreshold(double energy, const std::string& type){
+	thresholds.push_back({energy,type});
+}
+
+void LevelScheme::addThreshold(double energy, const std::string& type, const std::vector<double>& dash, double r, double g, double b){
+	thresholds.push_back({energy,type,dash,r,g,b});
+}
+
 void LevelScheme::printScheme() const {
 	std::cout << "Nuclear Level Scheme:\n";
 	for(const auto& lvl : levels){
@@ -23,3 +31,4 @@ void LevelScheme::printScheme() const {
 
 const std::vector<Level>& LevelScheme::getLevels() const { return levels; }
 const std::vector<Transition>& LevelScheme::getTransitions() const { return transitions; }
+const std::vector<Threshold>& LevelScheme::getThresholds() const { return thresholds; }
