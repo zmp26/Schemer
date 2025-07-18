@@ -9,6 +9,11 @@ pkg_check_modules(CAIRO REQUIRED cairo)
 include_directories(${CAIRO_INCLUDE_DIRS})
 link_directories(${CAIRO_LIBRARY_DIRS})
 
-add_executable(Schemer src/main.cpp src/LevelScheme.cpp src/CairoRenderer.cpp)
+add_executable(Schemer
+               src/main.cpp
+               src/LevelScheme.cpp
+               src/CairoRenderer.cpp
+               src/SchemeParser.cpp
+)
 
 target_link_libraries(Schemer ${CAIRO_LIBRARIES})

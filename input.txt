@@ -1,0 +1,24 @@
+#first scheme (comment lines start with#)
+ISOTOPE: ^6Li
+
+LEVEL: 0.0 1+ Ground
+LEVEL: 2186.2 3+ 1stExc
+LEVEL: 3562.88 0+ 2ndExc
+LEVEL: 4312.22 2+ 3rdExc
+
+THRESHOLD: 1400 Alpha 1.0 0.0 0.0 4 2
+
+TRANSITION: 4312.22 3562.88 gamma 0.1
+
+#separate schemes with the string "==="
+===
+
+#second scheme
+ISOTOPE: ^100Ab
+
+LEVEL: 0.0 1+ Ground
+LEVEL: 1344.90 1+ 1stExc
+
+THRESHOLD: 1221.55 Alpha 1.0 0.0 0.0 4 2
+
+TRANSITION: 1344.90 0.0 gamma 75.2
